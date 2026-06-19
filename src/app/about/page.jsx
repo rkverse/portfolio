@@ -11,9 +11,14 @@ export default function AboutPage() {
         padding: "10rem 2.5rem 7rem",
         background: "var(--bg)",
         minHeight: "100svh",
+        overflowX: "hidden",        // Safety against overflow
       }}
     >
-      <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+      <div style={{ 
+        maxWidth: 1280, 
+        margin: "0 auto", 
+        width: "100%" 
+      }}>
         <SectionHeader
           label="About"
           title={<>Who I am.</>}
@@ -24,13 +29,14 @@ export default function AboutPage() {
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(380px, 1fr))",
-            gap: "4rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", // Reduced from 380px
+            gap: "3.5rem",                                             // Better mobile spacing
             alignItems: "start",
+            width: "100%",
           }}
         >
           {/* Bio Section */}
-          <div>
+          <div style={{ width: "100%" }}>
             <p
               style={{
                 fontFamily: "var(--font-body)",
@@ -65,9 +71,10 @@ export default function AboutPage() {
             <div
               style={{
                 display: "grid",
-                gridTemplateColumns: "repeat(auto-fit, minmax(220px, 1fr))",
+                gridTemplateColumns: "repeat(auto-fit, minmax(210px, 1fr))", // Slightly reduced
                 gap: "0.75rem",
                 marginTop: "2.5rem",
+                width: "100%",
               }}
             >
               <AboutCard icon="📍" title="Location" value="India" />
@@ -78,12 +85,18 @@ export default function AboutPage() {
           </div>
 
           {/* Skills Section */}
-          <div>
+          <div style={{ width: "100%" }}>
             {categories.map((cat) => {
               const catSkills = skills.filter((s) => s.category === cat);
               if (!catSkills.length) return null;
               return (
-                <div key={cat} style={{ marginBottom: "2.5rem" }}>
+                <div 
+                  key={cat} 
+                  style={{ 
+                    marginBottom: "2.5rem",
+                    width: "100%" 
+                  }}
+                >
                   <div
                     style={{
                       display: "flex",
@@ -130,6 +143,7 @@ export default function AboutPage() {
                           border: "1px solid var(--line)",
                           padding: "0.35rem 0.85rem",
                           borderRadius: "var(--r-sm)",
+                          whiteSpace: "nowrap",     // Prevents awkward line breaks
                         }}
                       >
                         {skill.name}

@@ -12,26 +12,28 @@ export default function ExperiencePage() {
         padding: "10rem 2.5rem 7rem",
         background: "var(--bg)",
         minHeight: "100svh",
+        overflowX: "hidden", // Safety net
       }}
     >
-      <div style={{ maxWidth: 1280, margin: "0 auto" }}>
+      <div style={{ maxWidth: 1280, margin: "0 auto", width: "100%" }}>
         <SectionHeader
           label="Experience"
           title={<>My journey<br />so far.</>}
           subtitle="Where I've worked, studied, and grown professionally."
         />
 
-        {/* Responsive Grid */}
+        {/* Responsive Grid - Better mobile behavior */}
         <div
           style={{
             display: "grid",
-            gridTemplateColumns: "repeat(auto-fit, minmax(420px, 1fr))",
-            gap: "4.5rem",
+            gridTemplateColumns: "repeat(auto-fit, minmax(340px, 1fr))", // Reduced from 420px
+            gap: "3.5rem", // Slightly smaller gap
             alignItems: "start",
+            width: "100%",
           }}
         >
           {/* Work Experience */}
-          <div>
+          <div style={{ width: "100%" }}>
             <div
               style={{
                 display: "flex",
@@ -70,7 +72,7 @@ export default function ExperiencePage() {
           </div>
 
           {/* Education */}
-          <div>
+          <div style={{ width: "100%" }}>
             <div
               style={{
                 display: "flex",
