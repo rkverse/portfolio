@@ -4,6 +4,7 @@ import Link from "next/link";
 import { usePathname } from "next/navigation";
 
 const navLinks = [
+  { href: "/",           label: "Home" },
   { href: "/about",      label: "About" },
   { href: "/projects",   label: "Projects" },
   { href: "/experience", label: "Experience" },
@@ -140,9 +141,9 @@ export default function Navbar() {
           ))}
         </ul>
 
-        <a href="mailto:rajkaranprem@outlook.com" className="navbar__cta">
+        <Link href="/contact" className="navbar__cta">
           Hire me
-        </a>
+        </Link>
 
         <button className="navbar__toggle" onClick={() => setOpen(!open)} aria-label="Menu">
           <svg width="22" height="22" fill="none" stroke="currentColor" strokeWidth="1.5">

@@ -77,7 +77,7 @@ export default function Footer() {
           }}>Connect</p>
           <div style={{ display: "flex", flexDirection: "column", gap: "0.6rem" }}>
             {[
-              { href: "https://github.com/rkgit-1530",     icon: <FiGithub size={14} />,   label: "GitHub" },
+              { href: "https://github.com/rkverse",     icon: <FiGithub size={14} />,   label: "GitHub" },
               { href: "https://linkedin.com/in/rajkaran7", icon: <FiLinkedin size={14} />, label: "LinkedIn" },
               { href: "mailto:rajkaranprem@outlook.com",   icon: <FiMail size={14} />,     label: "Email" },
             ].map((s) => (

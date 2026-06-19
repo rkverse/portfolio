@@ -8,7 +8,7 @@ const personal = {
     "Passionate full-stack developer with strong skills in JavaScript and modern web technologies. Experienced in building scalable web and mobile applications, UI/UX design, and real-world projects across MERN and React Native. Self-driven learner with internship and freelance experience.",
   email: "rajkaranprem@outlook.com",
   phone: "+91 9962313298",
-  github: "https://github.com/rkgit-1530",
+  github: "https://github.com/rkverse",
   linkedin: "https://linkedin.com/in/rajkaran7",
   portfolio: "#",
 };
@@ -121,16 +121,18 @@ const blogs = [
 
 const skills = [
   { name: "HTML", category: "Frontend" },
-  { name: "CSS", category: "Frontend" },
   { name: "JavaScript", category: "Frontend" },
   { name: "React JS", category: "Frontend" },
   { name: "Tailwind CSS", category: "Frontend" },
   { name: "Bootstrap", category: "Frontend" },
+  { name: "Next JS", category: "Frontend" },
   { name: "Node JS", category: "Backend" },
   { name: "Django", category: "Backend" },
   { name: "Firebase", category: "Backend" },
   { name: "React Native", category: "Mobile" },
   { name: "Git", category: "Tools" },
+  {name: "Figma", category: "Tools" },
+  {name:"Spring Boot", category:"Backend"},
 ];
 
 // ─── Export all data ────────────────────────────────────────────────────────────
